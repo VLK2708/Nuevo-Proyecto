@@ -1,0 +1,35 @@
+<section class="hero">
+  <div class="hero-blob blob-a"></div>
+  <div class="hero-blob blob-b"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="status-pill fade-up">
+        <span class="dot"></span>
+        Recibiendo equipos hoy
+      </span>
+
+      <h1 class="hero-title fade-up">
+        Calidad, confianza y compromiso
+        <span class="grad-text">en cada equipo.</span>
+      </h1>
+
+      <p class="hero-sub fade-up">
+        Mantenimiento y reparación de impresoras y computadores, renta de equipos por
+        días, meses o años, recarga de tóner y venta de insumos. Todo en un solo lugar.
+      </p>
+
+      <div class="hero-cta fade-up">
+        <a href="#servicios" class="btn btn-grad">Ver servicios</a>
+        <a href="#contacto" class="btn btn-outline">Solicitar cotización</a>
+      </div>
+    </div>
+
+    <div class="hero-cards">
+      <div class="hero-card fade-up" *ngFor="let c of cards; let i = index" [style.transition-delay]="(i * 0.08) + 's'">
+        <span class="hero-card-icon">{{ c.icon }}</span>
+        <span>{{ c.label }}</span>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<section id="servicios">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Lo que hacemos</span>
+        <h2>Todo lo que tu equipo necesita para no parar.</h2>
+      </div>
+      <p>Servicio técnico especializado con diagnóstico claro y garantía por escrito en cada trabajo.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card fade-up" *ngFor="let s of servicios">
+        <span class="service-num">{{ s.num }}</span>
+        <div class="service-icon">{{ s.icon }}</div>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.desc }}</p>
+        <a href="#contacto" class="service-link">{{ s.link }} &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>

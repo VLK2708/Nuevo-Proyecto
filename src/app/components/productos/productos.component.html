@@ -1,0 +1,22 @@
+<section id="productos">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Catálogo</span>
+        <h2>Insumos y papelería, siempre disponibles.</h2>
+      </div>
+      <p>Entrega inmediata para que tu oficina no se detenga.</p>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card fade-up" *ngFor="let p of productos">
+        <div class="product-top">
+          <div class="product-icon">{{ p.icon }}</div>
+          <span class="tag-chip">{{ p.tag }}</span>
+        </div>
+        <h4>{{ p.title }}</h4>
+        <p>{{ p.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>

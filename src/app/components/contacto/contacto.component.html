@@ -1,0 +1,67 @@
+<section class="contacto" id="contacto">
+  <div class="container">
+    <div class="section-head light">
+      <div>
+        <span class="eyebrow">Contacto</span>
+        <h2>¿Listo para poner tu equipo en orden?</h2>
+      </div>
+      <p>Escríbenos y te respondemos el mismo día.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div><strong>Teléfono / WhatsApp</strong><p>+57 300 000 0000</p></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📧</span>
+          <div><strong>Correo electrónico</strong><p>marcomafh&#64;gmail.com</p></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div><strong>Ubicación</strong><p>Colombia</p></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">🕐</span>
+          <div><strong>Horario de atención</strong><p>Lun – Vie: 8am – 6pm<br>Sáb: 9am – 1pm</p></div>
+        </div>
+      </div>
+
+      <form class="contact-form" (ngSubmit)="onSubmit()" #ngForm="ngForm">
+        <div class="form-status" [class.show]="status !== 'idle'" [class.ok]="status === 'ok'" [class.err]="status === 'err'">
+          {{ statusMessage }}
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" [(ngModel)]="form.nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" [(ngModel)]="form.email" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="servicio">Servicio de interés</label>
+          <select id="servicio" name="servicio" [(ngModel)]="form.servicio">
+            <option value="">Selecciona una opción</option>
+            <option *ngFor="let s of servicios" [value]="s">{{ s }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos en qué podemos ayudarte..." [(ngModel)]="form.mensaje" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-grad btn-full" [disabled]="sending">
+          {{ sending ? 'Enviando...' : 'Enviar mensaje' }}
+        </button>
+        <p class="form-note">Al enviar este formulario tu mensaje llegará directamente a nuestro correo de seguimiento.</p>
+      </form>
+    </div>
+  </div>
+</section>

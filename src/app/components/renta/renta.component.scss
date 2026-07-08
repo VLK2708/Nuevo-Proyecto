@@ -1,0 +1,47 @@
+.renta {
+  background: linear-gradient(135deg, var(--deep) 0%, #103A5E 60%, var(--blue) 100%);
+  color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.eyebrow.light { color: #7FE0A8; }
+
+.renta-copy { padding: 58px 54px; }
+.renta-copy h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin: 14px 0 16px;
+  line-height: 1.15;
+}
+.renta-copy p { color: #CFE0EA; margin-bottom: 30px; max-width: 440px; }
+
+.renta-plans {
+  background: rgba(255,255,255,0.06);
+  padding: 42px 46px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+.renta-plan {
+  padding-bottom: 24px;
+  border-bottom: 1px dashed rgba(255,255,255,0.2);
+}
+.renta-plan:last-child { border-bottom: none; padding-bottom: 0; }
+.renta-plan-name {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #7FE0A8;
+}
+.renta-plan-desc { display: block; font-size: 0.92rem; color: #fff; margin-top: 6px; }
+
+@media (max-width: 860px) {
+  .renta { grid-template-columns: 1fr; }
+  .renta-copy, .renta-plans { padding: 40px 30px; }
+}

@@ -1,0 +1,33 @@
+<section id="nosotros">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Nosotros</span>
+        <h2>Confianza, rapidez y soporte real.</h2>
+      </div>
+      <p>Un equipo técnico comprometido con tu operación diaria.</p>
+    </div>
+
+    <div class="nosotros-grid">
+      <div class="nosotros-gallery">
+        <img src="assets/taller-01.jpeg" alt="Trabajo técnico realizado por VU Suministros & Servicios" loading="lazy">
+        <img src="assets/taller-02.jpeg" alt="Equipos atendidos por VU Suministros & Servicios" loading="lazy">
+      </div>
+      <div>
+        <p class="nosotros-intro">Somos un equipo técnico dedicado a que tus impresoras y computadores funcionen sin contratiempos, con diagnósticos claros y respuesta oportuna.</p>
+        <div class="nosotros-list">
+          <div class="nosotros-item" *ngFor="let p of puntos">
+            <span class="check">✓</span> {{ p }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box fade-up" *ngFor="let s of stats">
+        <span class="stat-num grad-text">{{ s.num }}</span>
+        <span class="stat-label">{{ s.label }}</span>
+      </div>
+    </div>
+  </div>
+</section>

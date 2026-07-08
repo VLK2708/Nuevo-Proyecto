@@ -1,0 +1,18 @@
+<section id="renta">
+  <div class="container">
+    <div class="renta fade-up">
+      <div class="renta-copy">
+        <span class="eyebrow light">Contratos</span>
+        <h2>Renta de impresoras y equipos, a tu medida.</h2>
+        <p>Contratos flexibles pensados para oficinas, eventos o proyectos temporales. Tú eliges el plazo, nosotros nos encargamos del mantenimiento.</p>
+        <a href="#contacto" class="btn btn-grad">Cotizar contrato</a>
+      </div>
+      <div class="renta-plans">
+        <div class="renta-plan" *ngFor="let p of planes">
+          <span class="renta-plan-name">{{ p.name }}</span>
+          <p class="renta-plan-desc">{{ p.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
