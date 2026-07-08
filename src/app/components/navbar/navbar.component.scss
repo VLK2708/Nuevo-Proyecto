@@ -10,25 +10,28 @@
 .nav-inner {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 16px 32px;
+  padding: 10px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .logo-mark {
-  width: 40px; height: 40px;
-  border-radius: 12px;
-  background: #fff;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 6px 16px -6px rgba(11, 42, 74, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.logo-mark img {
+    width: 100px;
+    height: 65px;
+}
+
 
 .logo-text {
   font-family: var(--font-display);
