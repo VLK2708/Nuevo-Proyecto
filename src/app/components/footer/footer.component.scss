@@ -9,15 +9,13 @@
   flex-wrap: wrap;
   gap: 16px;
 }
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #fff;
-  font-family: var(--font-display);
-  font-weight: 700;
+
+.footer-brand img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 .footer-copy { font-size: 0.8rem; color: #9FB4C4; }
-.footer-links { display: flex; gap: 22px; font-size: 0.85rem; }
+.footer-links { display: flex; gap: 20px; font-size: 0.85rem; }
 .footer-links a { color: #CFE0EA; }
 .footer-links a:hover { color: #7FE0A8; }

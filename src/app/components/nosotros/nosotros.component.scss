@@ -6,19 +6,20 @@
 }
 
 .nosotros-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .nosotros-gallery img {
+  width: 100%;
+  max-width: 430px;   /* Aumenta a 450px o 480px si la quieres más grande */
+  height: auto;
   border-radius: var(--radius);
-  aspect-ratio: 4/5;
   object-fit: cover;
   box-shadow: 0 20px 40px -24px rgba(11,42,74,0.35);
 }
-.nosotros-gallery img:first-child { margin-top: 34px; }
-
-.nosotros-intro { color: var(--text-soft); margin-bottom: 24px; font-size: 1.02rem; }
+.nosotros-intro { color: var(--text-soft); margin-bottom: 24px; font-size: 1.2rem; }
 
 .nosotros-list { display: flex; flex-direction: column; gap: 15px; }
 .nosotros-item {
