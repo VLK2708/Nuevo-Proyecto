@@ -1,5 +1,6 @@
 <section id="productos">
   <div class="container">
+
     <div class="section-head">
       <div>
         <span class="eyebrow">Catálogo</span>
@@ -8,14 +9,99 @@
     </div>
 
     <div class="products-grid">
+
       <div class="product-card fade-up" *ngFor="let p of productos">
+
         <div class="product-top">
-          <div class="product-icon">{{ p.icon }}</div>
+          <div class="product-icon">
+            <i [class]="p.icon"></i>
+          </div>
           <span class="tag-chip">{{ p.tag }}</span>
         </div>
+
         <h4>{{ p.title }}</h4>
+
         <p>{{ p.desc }}</p>
+
+        <div class="product-actions">
+          <a
+            href="javascript:void(0)"
+            class="detail-link"
+            (click)="openProducto(p)">
+            Ver detalle →
+          </a>
+        </div>
+
       </div>
+
     </div>
+
   </div>
 </section>
+
+<!-- ===========================
+        MODAL DEL PRODUCTO
+============================ -->
+
+<div
+  class="modal-overlay"
+  *ngIf="selectedProducto"
+  (click)="closeProducto()">
+
+  <div
+    class="product-modal"
+    (click)="$event.stopPropagation()">
+
+    <button
+      class="close-btn"
+      (click)="closeProducto()">
+      ✕
+    </button>
+
+    <div class="modal-image">
+      <img
+        [src]="selectedProducto.image"
+        [alt]="selectedProducto.title">
+    </div>
+
+    <div class="modal-content">
+
+      <span class="modal-tag">
+        {{ selectedProducto.tag }}
+      </span>
+
+      <h2>
+        {{ selectedProducto.title }}
+      </h2>
+
+      <p>
+        {{ selectedProducto.detail }}
+      </p>
+
+      <ul>
+        <li *ngFor="let item of selectedProducto.features">
+          {{ item }}
+        </li>
+      </ul>
+
+      <div class="modal-buttons">
+
+        <a href="#contacto"
+           class="btn btn-grad"
+           (click)="closeProducto()">
+          Solicitar cotización
+        </a>
+
+        <button
+          class="btn btn-outline"
+          (click)="closeProducto()">
+          Cerrar
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

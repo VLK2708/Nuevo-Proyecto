@@ -3,6 +3,8 @@
   <div class="hero-blob blob-b"></div>
 
   <div class="container hero-inner">
+
+    <!-- Texto -->
     <div class="hero-copy">
       <span class="status-pill fade-up">
         <span class="dot"></span>
@@ -14,8 +16,9 @@
       </h1>
 
       <p class="hero-sub fade-up">
-        Todo lo que tu empresa necesita en tecnología, en un solo lugar. 
-        Mantenimiento y reparación de impresoras y computadores, renta de equipos, recarga de tóner y venta de insumos con un servicio rápido, confiable y de alta calidad.
+        Todo lo que tu empresa necesita en tecnología, en un solo lugar.
+        Mantenimiento y reparación de impresoras y computadores, renta de equipos,
+        recarga de tóner y venta de insumos con un servicio rápido, confiable y de alta calidad.
       </p>
 
       <div class="hero-cta fade-up">
@@ -24,10 +27,18 @@
       </div>
     </div>
 
+    <!-- Tarjetas -->
     <div class="hero-cards">
-      <div class="hero-card fade-up" *ngFor="let c of cards; let i = index" [style.transition-delay]="(i * 0.08) + 's'">
-        <span class="hero-card-icon">{{ c.icon }}</span>
-        <span>{{ c.label }}</span>
+      <div class="hero-card" *ngFor="let card of cards">
+        <div class="hero-card-icon">
+          <i [class]="card.icon"></i>
+        </div>
+
+        <h3>{{ card.label }}</h3>
+
+        <p class="hero-card-description">
+          {{ card.description }}
+        </p>
       </div>
     </div>
   </div>
