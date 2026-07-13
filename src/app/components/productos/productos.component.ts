@@ -33,10 +33,9 @@ export class ProductosComponent {
       image: 'toner.jpg',
 
       detail:
-        'Ofrecemos tóner originales y compatibles de alta calidad para impresoras láser. Nuestros productos garantizan excelente rendimiento, impresiones nítidas y mayor duración, ideales tanto para hogares como para empresas.',
+        'Tóner originales y compatibles de alta calidad, con excelente rendimiento, impresiones nítidas y gran duración para hogares y empresas.',
 
       features: [
-        'Tóner originales y compatibles',
         'Para HP, Epson, Kyocera, Canon y Samsung',
         'Excelente calidad de impresión',
         'Mayor rendimiento por carga',
