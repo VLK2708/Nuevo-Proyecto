@@ -4,7 +4,6 @@
 
   <div class="container hero-inner">
 
-    <!-- Texto -->
     <div class="hero-copy">
       <span class="status-pill fade-up">
         <span class="dot"></span>
@@ -17,8 +16,9 @@
 
       <p class="hero-sub fade-up">
         Todo lo que tu empresa necesita en tecnología, en un solo lugar.
-        Mantenimiento y reparación de impresoras y computadores, renta de equipos,
-        recarga de tóner y venta de insumos con un servicio rápido, confiable y de alta calidad.
+        Mantenimiento y reparación de impresoras y computadores,
+        renta de equipos, recarga de tóner y venta de insumos con un
+        servicio rápido, confiable y de alta calidad.
       </p>
 
       <div class="hero-cta fade-up">
@@ -27,19 +27,34 @@
       </div>
     </div>
 
-    <!-- Tarjetas -->
-    <div class="hero-cards">
-      <div class="hero-card" *ngFor="let card of cards">
-        <div class="hero-card-icon">
-          <i [class]="card.icon"></i>
-        </div>
+    <!-- NUEVO SLIDER -->
 
-        <h3>{{ card.label }}</h3>
+    <div class="hero-slider fade-up">
 
-        <p class="hero-card-description">
-          {{ card.description }}
-        </p>
+      <img
+        [src]="slides[currentSlide].image"
+        [alt]="slides[currentSlide].title"
+        [class.fade]="fade">
+
+      <div class="hero-slider-content">
+
+        <h3>{{slides[currentSlide].title}}</h3>
+
+        <p>{{slides[currentSlide].description}}</p>
+
       </div>
+
+      <div class="hero-dots">
+
+        <span
+          *ngFor="let slide of slides; let i = index"
+          [class.active]="i===currentSlide">
+        </span>
+
+      </div>
+
     </div>
+
   </div>
+
 </section>
